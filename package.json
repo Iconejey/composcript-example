@@ -1,10 +1,11 @@
 {
 	"name": "composcript-example",
 	"description": "Example project using CompoScript framework with a simple express.js server.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "./src/server.js",
 	"scripts": {
-		"start": "nodemon ./src/server.js"
+		"start": "nodemon ./src/server.js",
+		"sass": "sass --no-source-map --watch public/styles/scss:public/styles/css"
 	},
 	"repository": {
 		"type": "git",
