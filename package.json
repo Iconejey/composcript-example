@@ -1,32 +1,36 @@
 {
-	"name": "composcript-example",
-	"description": "Example project using CompoScript framework with a simple express.js server.",
-	"version": "0.0.2",
-	"main": "./src/server.js",
-	"scripts": {
-		"start": "nodemon ./src/server.js",
-		"sass": "sass --no-source-map --watch public/styles/scss:public/styles/css"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Iconejey/composcript-example.git"
-	},
-	"keywords": [
-		"composcript",
-		"framework",
-		"example",
-		"project",
-		"javasript",
-		"web"
-	],
-	"author": "Nicolas Gouwy",
-	"license": "CC0-1.0",
-	"bugs": {
-		"url": "https://github.com/Iconejey/composcript-example/issues"
-	},
-	"homepage": "https://github.com/Iconejey/composcript-example#readme",
-	"dependencies": {
-		"express": "^4.18.1",
-		"nodemon": "^2.0.19"
-	}
+    "name": "composcript-example",
+    "description": "Example project using CompoScript framework with a simple express.js server.",
+    "version": "0.0.3",
+    "main": "./src/server.js",
+    "scripts": {
+        "start": "nodemon ./src/server.js",
+        "sass": "sass --no-source-map --watch public/styles/scss:public/styles/css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Iconejey/composcript-example.git"
+    },
+    "keywords": [
+        "composcript",
+        "framework",
+        "example",
+        "project",
+        "javasript",
+        "web"
+    ],
+    "author": "Nicolas Gouwy",
+    "license": "CC0-1.0",
+    "bugs": {
+        "url": "https://github.com/Iconejey/composcript-example/issues"
+    },
+    "homepage": "https://github.com/Iconejey/composcript-example#readme",
+    "dependencies": {
+        "express": "^4.18.1",
+        "nodemon": "^2.0.19"
+    },
+    "composcript": {
+        "components": "./public/components",
+        "scss": "./public/styles/scss"
+    }
 }

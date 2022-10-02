@@ -1,0 +1,37 @@
+class MainApp {
+	// <main-app />
+
+	async created(content) {
+		<This>
+			<h1>Loading...</h1>
+		</This>;
+
+		this.loadTweets(await getTweets());
+	}
+
+	loadTweets(tweets) {
+		<This>
+			<h1>Tweets</h1>
+			<div id="tweets-container"></div>
+		</This>;
+
+		const test_div = (
+			<div id="test-div">
+				<h1>Test</h1>
+				{/* <p>Coucou, c'est un test</p> */}
+			</div>
+		);
+
+		test_div.innerHtml = '<h2>Test 2</h2>';
+
+		const second_test = <div class="test2">hey</div>;
+
+		for (const tweet of tweets) {
+			this.tweets_container.appendChild(<tweet-panel tweet={tweet} noshare />);
+		}
+	}
+}
+
+async function getTweets() {
+	return ['a5b4c3', 'd2e1f0', 'g9h8i7'];
+}

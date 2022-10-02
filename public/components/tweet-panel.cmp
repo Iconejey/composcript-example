@@ -1,0 +1,42 @@
+class TweetPanel {
+	// <tweet-panel !tweet noshare? .liked .retweeted />
+
+	async created(content) {
+		const data = await getTweetData(this.tweet);
+
+		<This>
+			<div id="top">
+				<div id="user">
+					<h3>{data.user}</h3>
+					<p>@{data.tag}</p>
+				</div>
+			</div>
+
+			<p>{data.text}</p>
+
+			<div id="btns">
+				<a href="#" class="btn" id="like">
+					<i class="icon">like</i>
+				</a>
+
+				<a href="#" class="btn" id="retweet">
+					<i class="icon">retweet</i>
+				</a>
+			</div>
+		</This>;
+
+		this.liked = data.liked;
+		this.retweeted = data.retweeted;
+	}
+}
+
+async function getTweetData(tweet_id) {
+	return {
+		id: tweet_id,
+		user: 'John Doe',
+		tag: 'johndoe',
+		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		liked: true,
+		retweeted: false
+	};
+}
